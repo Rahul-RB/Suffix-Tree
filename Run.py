@@ -1,7 +1,7 @@
 import sys
 import time
 import SuffixTree as st
-import parseDocuments as pd
+import ParseDocuments as pd
 from Document import Document
 
 docsArr,titlesArr = pd.getDocs()

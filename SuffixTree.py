@@ -63,17 +63,14 @@ def unpackResults2(results): #FOR QUESTION 2
 	return finalResult
 
 class SuffixTree(object):
-	"""docstring for SuffixTree"""
 	def __init__(self):
 		self.root = TreeNode(None)
-	
 	def add(self,document):
 		newWord = document.getText() + "$"
 		suffixes = [newWord[i:] for i in range(0,len(newWord))]
 		
 		for i in range(0,len(suffixes)):
 			self.privInsert(self.root,suffixes[i],i,document)
-
 	def privInsert(self,node,suffix,suffixNumber,document):
 		child = node.getEdge(suffix[0])
 		
@@ -129,8 +126,6 @@ class SuffixTree(object):
 
 		node.setEdge(suffix[:numMatched],newInternalNode)
 		return
-
-
 	def getDescendantLeafNodes(self,node):
 		descedants = []
 		if(isinstance(node,LeafNode)):
@@ -149,8 +144,6 @@ class SuffixTree(object):
 			descedants+=childDescedants
 
 		return descedants
-
-
 	def findAll(self,query):
 		results = []
 		child = self.root.getEdge(query[0])
@@ -185,7 +178,6 @@ class SuffixTree(object):
 
 		results = unpackResults(results)
 		return results
-
 	def findAll2(self,query): #FOR QUESTION 2
 		results = []
 		child = self.root.getEdge(query[0])
@@ -223,3 +215,5 @@ class SuffixTree(object):
 		if(results!=[]):
 			results = unpackResults2(results)
 		return results
+
+

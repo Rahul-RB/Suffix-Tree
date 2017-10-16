@@ -1,14 +1,11 @@
 class TreeNode(object):
-	"""docstring for TreeNode"""
 	def __init__(self,substring):
 		self.edges = {}
-		self.substring = substring #the one which led to this node
-
+		self.substring = substring
 	def getEdges(self):
 		if(self.edges == {}):
 			return None
-		return self.edges
-	
+		return self.edges	
 	def getEdge(self,firstChar):
 		child = firstChar
 		keys = list(self.edges.keys())
@@ -20,6 +17,5 @@ class TreeNode(object):
 		else:
 			return None
 		return None
-
 	def setEdge(self,substring,child):
 		self.edges[substring] = child

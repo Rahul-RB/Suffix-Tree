@@ -140,6 +140,9 @@ elif(argument=='q3'):
 		listOfWords = query.split(' ')
 		checkIf = 1
 	else:
+		if(query==''):
+			print("Enter at least one character\nExiting now.")
+			exit()
 		if(query[0]!=' ' and query[1]!=' '):
 			queryMain = ' '+query+' '
 			listOfWords = query.split(' ')

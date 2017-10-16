@@ -7,7 +7,6 @@ class Document(object):
 	def getTitle(self):
 		return self.title
 
-
 	def getText(self):
 		return self.text
 

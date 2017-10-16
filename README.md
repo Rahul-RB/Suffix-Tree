@@ -25,7 +25,7 @@ The option for custom input strings are done in execution time.
 
 # Tests and Results: <all are average times>
 ### Creating GST:
- Creating a single GST:5.7536 seconds.
+ Creating a single GST:5.7536 seconds.<br>
  Creating 'n' trees, one for each document: 2.5846 seconds. 
 
 ### Question 1:

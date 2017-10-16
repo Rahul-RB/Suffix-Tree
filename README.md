@@ -23,6 +23,23 @@ $python3 Run.py q1
 ```
 The option for custom input strings are done in execution time.
 
+# Tests and Results: <all are average times>
+### Creating GST:
+ Creating a single GST:5.7536 seconds.
+ Creating 'n' trees, one for each document: 2.5846 seconds. 
+
+### Question 1:
+ Searching common string ‘one’ on single GST: 0.001463 seconds.
+ String “and thus addressed the Crow” on single GST: 0.0001406 seconds.
+
+### Question 2:
+Searching ‘charger’: 0.0303 seconds.
+Searching ‘it would be as if I should beg every Dog’: 1.2362 seconds.
+
+### Question 3:
+Searching default string “it would be as if I should beg every Dog”: 2.12736
+seconds.
+Searching custom string “charger”: 0.06277 seconds.
 
 # File Structure: 
   - ### SuffixTree.py

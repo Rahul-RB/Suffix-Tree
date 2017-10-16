@@ -27,7 +27,7 @@ if(argument=='q1'):
 	for ele in allDocuments:
 		t3.add(ele)
 	end = time.time()
-	print("Tree Building done,took:",end-start)
+	print("Tree Building done,took:",end-start,"seconds")
 
 	query = input("Enter custom query, enter * to use default query - 'one':")
 	
@@ -44,7 +44,7 @@ if(argument=='q1'):
 		resCount+=1
 
 	print("Number of Results:",resCount)
-	print("Results found in:",end-start,"ms")
+	print("Results found in:",end-start,"seconds")
 
 elif(argument=='q2'):
 	treesArray = []
@@ -65,7 +65,7 @@ elif(argument=='q2'):
 		i=i+1
 
 	end = time.time()
-	print("Tree Building done,took:",end-start)
+	print("Tree Building done,took:",end-start,"seconds")
 
 	query = input("Enter custom query, enter * to use default query - 'charger'")
 	
@@ -93,7 +93,7 @@ elif(argument=='q2'):
 		print("QUERY:",query)
 		print(result)
 	
-	print("Results found in:",end-start,"ms")
+	print("Results found in:",end-start,"seconds")
 
 elif(argument=='q3'):
 	#YET TO IMPLEMENT PEEPS
@@ -127,7 +127,7 @@ elif(argument=='q3'):
 		i=i+1
 
 	end = time.time()
-	print("Tree Building done,took:",end-start)
+	print("Tree Building done,took:",end-start,"seconds")
 
 	query = input("Enter custom query, enter * to use default query - 'it would be as if I should beg every Dog'")
 	results = []
@@ -183,7 +183,7 @@ elif(argument=='q3'):
 				print(res[0])
 				break
 	end = time.time()
-	print("Results found in:",end-start,"ms")
+	print("Results found in:",end-start,"seconds")
 	print("Note: This time is INCLUSIVE of time taken to execute all the print statements.")
 
 else:

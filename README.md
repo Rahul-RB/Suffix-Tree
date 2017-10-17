@@ -49,24 +49,24 @@ Searching custom string “charger”: 0.06277 seconds.
 	- Constructor takes no argument.
 	- Has attributes: root as its only attribute.
 	- Has methods: 
-		-add() to add a string or word into the tree.
-		-privInsert() private method, which actually inserts into the tree. Helper method of add() method.
-		-getDescendantLeafNodes() method which returns a list of references, each element being of type LeafNode, for an input node. Returns empty list if input is a leaf itself.
-		-findAll() to find all occurences of the query string in a document, used for question 1.
-		-findAll2() to find first occurence of the query string or a substring of the same in all trees.
+		-```add()``` to add a string or word into the tree.
+		-```privInsert()``` private method, which actually inserts into the tree. Helper method of add() method.
+		-```getDescendantLeafNodes()``` method which returns a list of references, each element being of type LeafNode, for an input node. Returns empty list if input is a leaf itself.
+		-```findAll()``` to find all occurences of the query string in a document, used for question 1.
+		-```findAll2()``` to find first occurence of the query string or a substring of the same in all trees.
 
   - TreeNode.py
 	- The class which generates an object of type TreeNode.
 	- Constructor takes one argument: substring, which is the string on edge, which led to the currently creating node.
-  		Eg: temp = TreeNode('adf') e land at temp node via string 'adf' from some node, not mentioned here.
+  		Eg: ```temp = TreeNode('adf')``` means land at temp node via string 'adf' from some node, not mentioned here.
   	- Has attributes: 
 		-substring(as defined above)
 		-a dictionary 'edges' which stores: Key: substring of children node. Value: object reference to Child Node (can be TreeNode/LeafNode).
   	- Has methods:
-  		-getEdge() which takes a character as input and returns the Node corresponding to the character. Returns None is no such node exists.
+  		-```getEdge()``` which takes a character as input and returns the Node corresponding to the character. Returns None is no such node exists.
   			Eg: Say string 'adf' leads to a Node 'temp' from 'root'. So newNode = root.getEdge('a') returns the reference of 'temp' to newNode.
-  		-getEdges() returns the dictionary of nodes(children) corresponding to the current node, returns None, if Node has no children.
-  		-setEdge() takes a substring(as defined above) and child as input and sets it into the 'edges' dictionary of the current node.
+  		-```getEdges()``` returns the dictionary of nodes(children) corresponding to the current node, returns None, if Node has no children.
+  		-```setEdge()``` takes a substring(as defined above) and child as input and sets it into the 'edges' dictionary of the current node.
 
   - LeafNode.py
   	- The class which generates a LeafNode type object.
@@ -76,10 +76,10 @@ Searching custom string “charger”: 0.06277 seconds.
   		-documents  a list of object references to Document objects.
   		-suffixNumbers  a list of integers which is the suffix number of the suffix which ended at this node.
   	- Has methods:
-  		-addDocument() which takes a Document object and suffixNumber as argument and appends these values to the LeafNode's attributes.
-  		-setSuffixNumbers() to insert a suffixNumber into suffixNumbers list.
-  		-setDocuments() to insert into a document into documents list.
-  		-getDocuments() and getSuffixNumbers() are getter methods of the above setter methods.
+  		-```addDocument()``` which takes a Document object and suffixNumber as argument and appends these values to the LeafNode's attributes.
+  		-```setSuffixNumbers()``` to insert a suffixNumber into suffixNumbers list.
+  		-```setDocuments()``` to insert into a document into documents list.
+  		-```getDocuments()``` and getSuffixNumbers() are getter methods of the above setter methods.
 
   - Document.py
   	- A class which creates an object which binds a document (story text) and its corresponding title (story title).
@@ -88,15 +88,15 @@ Searching custom string “charger”: 0.06277 seconds.
   		-title title of story, or any other text.
   		-text  text of story, or any other document.
   	- Has methods:
-  		-getTitle() and setTitle() getter and setter for title.
-  		-getText() and setText() getter and setter for text.
+  		-```getTitle()``` and ```setTitle()``` getter and setter for title.
+  		-```getText()``` and ```setText()``` getter and setter for text.
 
 - ParseDocuments.py
-	- A module which contains a function: getDocs()
-	- This getDocs() function parses input file, like AesopTales.txt.
+	- A module which contains a function: ```getDocs()```
+	- This ```getDocs()``` function parses input file, like AesopTales.txt.
 	- Returns two lists : docsArr and titlesArr which are list of documents and titles respectively.
-	- Brief functioning of getDocs() function: 
-		- Uses readlines() method of Files in Python to divide the files to lines and store to a list.
+	- Brief functioning of ```getDocs()``` function: 
+		- Uses ```readlines()``` method of Files in Python to divide the files to lines and store to a list.
 		- Replaces all '\n' with leading spaces with '\n' .
 		- Add first line to titles list, then iterate over the list until a set of two '\n' are found. Add the following lines(until another set of two '\n') to documents list.
 		- Replace each '\n' of document with a space, thus making each document or story a single line. 

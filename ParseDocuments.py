@@ -57,5 +57,5 @@ if __name__ == '__main__':
 	for ele in docsArr:
 		print(ele)
 
-	# for ele in titlesArr:
-	# 	print(ele)
+	for ele in titlesArr:
+		print(ele)

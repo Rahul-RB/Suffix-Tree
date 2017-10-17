@@ -20,26 +20,26 @@ except:
 
 if(argument=='q1'):
 	for title,doc in zip(titlesArr,docsArr):
-		allDocuments.append(Document(title,doc))
+		allDocuments.append(Document(title,doc)) #creating a list of documents, where each document object holds a title and text.
 	t3 = st.SuffixTree()
 
 	start = time.time()
 	for ele in allDocuments:
-		t3.add(ele)
+		t3.add(ele)		#-----------inserting into THE same suffix tree to create a GST--------------#
 	end = time.time()
 	print("Tree Building done,took:",end-start,"seconds")
 
-	query = input("Enter custom query, enter * to use default query - 'one':")
+	query = input("Enter custom query OR enter * to use default query - 'one':")
 	
 	if(query=='*'):
 		query = 'one'
 	start = time.time()
-	results = t3.findAll(query)
+	results = t3.findAll(query)  #FINDING RESULTS
 	end = time.time()
 
 	resCount = 0
 
-	for res in results:
+	for res in results: #PRINTING RESULTS
 		print(res)
 		resCount+=1
 
@@ -67,7 +67,7 @@ elif(argument=='q2'):
 	end = time.time()
 	print("Tree Building done,took:",end-start,"seconds")
 
-	query = input("Enter custom query, enter * to use default query - 'charger'")
+	query = input("Enter custom query OR enter * to use default query - 'charger':")
 	
 	if(query=='*'):
 		query = "charger"
@@ -129,7 +129,7 @@ elif(argument=='q3'):
 	end = time.time()
 	print("Tree Building done,took:",end-start,"seconds")
 
-	query = input("Enter custom query, enter * to use default query - 'it would be as if I should beg every Dog'")
+	query = input("Enter custom query OR enter * to use default query - 'it would be as if I should beg every Dog'")
 	results = []
 	checkIf = 0
 	checkElse=0
@@ -143,11 +143,13 @@ elif(argument=='q3'):
 		if(query==''):
 			print("Enter at least one character\nExiting now.")
 			exit()
-		if(query[0]!=' ' and query[1]!=' '):
-			queryMain = ' '+query+' '
-			listOfWords = query.split(' ')
-			checkElse=1
-	
+		if(len(query)>=2):
+			if(query[0]!=' ' and query[1]!=' '):
+				queryMain = ' '+query+' '
+				listOfWords = query.split(' ')
+				checkElse=1
+		else:
+			queryMain = query	
 	start = time.time()
 
 	for tree in treesArray:
@@ -184,7 +186,7 @@ elif(argument=='q3'):
 				break
 	end = time.time()
 	print("Results found in:",end-start,"seconds")
-	print("Note: This time is INCLUSIVE of time taken to execute all the print statements.")
+	print("Note: This time is INCLUSIVE of time taken to execute all the print statements.(if any)")
 
 else:
 	print("Please note that searches are case sensitive.")

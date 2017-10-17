@@ -2,7 +2,7 @@ Suffix Tree
 
 This implementation of suffix tree, or more precisely Patricia Trie, has been done in Python.
 
-This is a totally original implementation, I have not taken any code from any existing suffix tree implementations present online.
+This is a totally original implementation, I have not taken any code from any existing suffix tree implementations present online.<br>
 Please read 'other notes' at end, for extra, off-topic information.
 
 Index: 
@@ -13,6 +13,7 @@ Index:
 	5. Complexity of algorithm --> explained in Report.pdf.
 	6. Test cases and Results --> explained in Report.pdf.
 
+<<<<<<< HEAD
 To run,
 	
 	$python3 Run.py questionNumber
@@ -35,11 +36,35 @@ Question 1:
 
 Question 2:
 Searching ‘charger’: 0.0303 seconds.
+=======
+# To run,
+```
+$python3 Run.py questionNumber
+```
+where questionNumber can be: q1,q2 or q3 .
+Eg: To execute Question1, please do :
+```
+$python3 Run.py q1
+```
+The option for custom input strings are done in execution time.
+
+# Tests and Results: <all are average times>
+### Creating GST:
+ Creating a single GST:5.7536 seconds.<br>
+ Creating 'n' trees, one for each document: 2.5846 seconds. 
+
+### Question 1:
+ Searching common string ‘one’ on single GST: 0.001463 seconds.<br>
+ String “and thus addressed the Crow” on single GST: 0.0001406 seconds.
+
+### Question 2:
+Searching ‘charger’: 0.0303 seconds.<br>
+>>>>>>> 62c904936ffc1bb27446d7c1eaa6fc72a26b67b1
 Searching ‘it would be as if I should beg every Dog’: 1.2362 seconds.
 
 Question 3:
 Searching default string “it would be as if I should beg every Dog”: 2.12736
-seconds.
+seconds.<br>
 Searching custom string “charger”: 0.06277 seconds.
 
 File Structure: 
@@ -106,7 +131,14 @@ File Structure:
   		- Does th appropriate functioning for each question as expected.
 
 
+<<<<<<< HEAD
 Other notes:
 This assignment has been even more interesting to do, in comparision to the first assignment. This is the first time I have done object oriented programming in Python. It has helped me develop a good insight into python's implementation of various inbuilt methods and has also helped me . Although it was a risk doing this assignment in a language which I had never used for implementing Data Structures, it has now rewarded me with increased confidence in implementing Data Structures in OO languages in general. 
 I would like to thank NSK sir for boosting my confidence by showing a clear starting point for the assignment. I would also like to mention a friend of mine: Akhil MD who has helped me extensively in developing this. Ganesh, another friend of mine, has also helped me, for this assignment, in time of need. It would not have been possible for me to implement this DS without the help of any of them. 
 Thank you.
+=======
+# Other notes:
+This assignment has been even more interesting to do, in comparision to the first assignment. This is the first time I have done object oriented programming in Python. It has helped me develop a good insight into python's implementation of various inbuilt methods and has also helped me . Although it was a risk doing this assignment in a language which I had never used for implementing Data Structures, it has now rewarded me with increased confidence in implementing Data Structures in OO languages in general. <br>
+I would like to thank NSK sir for boosting my confidence by showing a clear starting point for the assignment. I would also like to mention a friend of mine: Akhil MD who has helped me extensively in developing this. Ganesh, another friend of mine, has also helped me, for this assignment, in time of need. It would not have been possible for me to implement this DS without the help of any of them. <br>
+Thank you.
+>>>>>>> 62c904936ffc1bb27446d7c1eaa6fc72a26b67b1
